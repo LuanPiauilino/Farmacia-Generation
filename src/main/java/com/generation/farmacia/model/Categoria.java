@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "tb_categoria")
@@ -18,11 +19,13 @@ public class Categoria {
 	@NotBlank(message = "Necessário inserir o nome da categoria.")
 	private String nome;
 
+	@NotNull
 	private boolean precisaReceita;
 
 	@NotBlank(message = "Necessário inserir qual é a função dessa categoria.")
 	private String funcao;
 
+	@NotNull
 	private boolean usoInfantil;
 
 	
